@@ -1,3 +1,3 @@
-export type THomeProps = {
+export type HomeProps = {
     serverTime: number;
 }

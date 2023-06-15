@@ -1,10 +1,7 @@
+import { Task } from '@/types';
 import React, { ChangeEvent, useRef } from 'react';
 
-interface Task {
-  id: number,
-  title: string,
-  completed: boolean,
-}
+
 
 const TaskManager = () => {
   // const createTaskRef = ...:
@@ -48,7 +45,7 @@ const TaskManager = () => {
     <div>
       <h1>Task Manager</h1>
 
-      <input type="text" /*ref={}*//>
+      <input type="text" /*ref={}*/ />
 
       <button onClick={handleAddTask}>Add Task</button>
 

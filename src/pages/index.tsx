@@ -1,4 +1,4 @@
-import { THomeProps } from "@/types";
+import { HomeProps } from "@/types";
 import { formatDateTime } from "@/utils";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
@@ -22,7 +22,7 @@ const calculateTimeDifference = (server: Date, client: Date) => {
   return `${days} days, ${hours} hours, ${minutes}  minutes, ${seconds} seconds`
 };
 
-export default function Home({ serverTime }: THomeProps) {
+export default function Home({ serverTime }: HomeProps) {
   const clientDate = new Date()
   const serverDate = new Date(serverTime)
   const timeDiff = calculateTimeDifference(clientDate, serverDate)
