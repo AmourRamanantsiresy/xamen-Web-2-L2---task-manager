@@ -4,9 +4,9 @@ export interface Task {
     completed: boolean,
 }
 
-type UpdateTask = Pick<Task, "title">
+export type UpdateTask = Pick<Task, "title">
 
-interface UseTaskManagerState {
+export interface UseTaskManagerState {
     tasks: Task[],
     searchTask: string,
 }
