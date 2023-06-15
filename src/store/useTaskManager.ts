@@ -8,6 +8,12 @@ const UpdateFailedError = (message: string) => { throw new Error(`Update failed 
 const useTaskManager = () => {
   const { read, save: cache } = useLocalStorage<UseTaskManagerState>("taskManagerState")
   const lastTaskManager = read()
+
+  /**
+   * will cache the value and return the same value
+   * @param value 
+   * @returns 
+   */
   const save = (value: UseTaskManagerState) => {
     cache(value);
     return value

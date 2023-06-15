@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
   @returns {string} The time difference in the format "{days} days, {hours} hours, {minutes} minutes, {seconds} seconds".
 */
 const calculateTimeDifference = (server: Date, client: Date) => {
+  // get the timestamp (ms) of these two dates
   const diff = Math.abs(server.getTime() - client.getTime());
 
   const seconds = Math.floor(diff / 1000) % 60;
